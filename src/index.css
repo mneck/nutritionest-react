@@ -36,34 +36,353 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+* {
+  padding: -0.1px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+a {
+  color: #00b7ff;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.error-message {
+  background-color: #82b981;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  height: 50px;
+  text-transform: none;
+  padding: 17px;
+  margin: 0px 0px 30px 0px;
+}
+
+.signup-container > div > h1 {
+  font-size: 35px;
+  color: #2d2d2d;
+}
+
+.signup-container > div > h5 {
+  font-size: 15px;
+  color: #2d2d2d;
+}
+
+/*  */
+
+form {
+  margin: 30px auto;
+  width: 380px;
+}
+
+form label {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+form input,
+form button {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form button {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease background;
+  width: 100%;
+}
+
+form button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: 0.3s ease background;
+}
+
+.error {
+  background: #f02b63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+thead,
+td {
+  text-align: left;
+  padding-right: 15px;
+}
+
+ul {
+  border-bottom: 2px solid #43a3e6;
+  height: 30px;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+ul li {
+  line-height: 20px;
+}
+
+#to-right {
+  padding: 1em;
+  float: right;
+}
+
+#to-right span {
+  color: #43a3e6;
+  font-size: 1.5em;
+}
+
+#form h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#to-left {
+  float: left;
+}
+
+#to-left p a {
+  color: #000;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#logout-form {
+  display: inline;
+}
+
+#logout-form button {
+  width: 120px;
+}
+
+/* Header */
+
+.bg-green {
+  background-color: #dee2cf;
+}
+
+.header-image {
+  background-image: url("../images/Footer/Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 45px;
+}
+
+.topbox {
+  height: 100px;
+}
+
+.header-links {
+  font-size: 18px;
+  line-height: 35px;
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+/* Home */
+
+.hero-image {
+  background-image: url("/images/Backgrounds/bean.png");
+  height: 60%;
+  background-position: top;
+  background-position-y: -10%;
+  background-repeat: no-repeat;
+  background-size: 140%;
+
+  z-index: 10;
+}
+
+.search-button {
+  margin-top: 100px;
+}
+
+/* .home-search {
+  background: linear-gradient(white, #DEE2CF);
+  padding: 50px 0px 50px 0px;
+  z-index: 5;
+} */
+
+.home-signup {
+  background: linear-gradient(#dee2cf, white);
+  padding: 50px 0px;
+}
+
+.home-articles {
+  background: linear-gradient(white, #dee2cf);
+  padding: 20px;
+  margin: 0;
+}
+
+.home-articles-img {
+  width: 175px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn-white {
+  background-color: white;
+  color: #2d2d2d;
+  border: 2px solid #048a38;
+  height: 60px;
+  text-transform: none;
+  padding: 17px;
+}
+
+/* Footer */
+
+.footer-image {
+  background-image: url("../images/Footer/Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 40px;
+  margin-top: 5px;
+}
+
+/* Sign up and Log in CSS */
+
+.margin-top {
+  margin: 10px 0px 50px 0px;
+}
+
+.form-height {
+  height: 50px;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
+}
+
+.btn-green {
+  background-color: #048a38;
+  color: white;
+  border: 1px solid #048a38;
+  height: 50px;
+  text-transform: none;
+}
+
+.btn-green > h5 {
+  padding: 4px;
+}
+
+.btn-green:hover {
+  background-color: #048a38;
+  color: white;
+  border: 1px solid #048a38;
+}
+
+.orText {
+  font-size: 12px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.btn-lightgreen {
+  background-color: #82b981;
+  color: white;
+  border: 1px solid #82b981;
+  height: 50px;
+  text-transform: none;
+}
+
+.btn-lightgreen:hover {
+  background-color: #82b981;
+  color: white;
+  border: 1px solid #82b981;
+}
+
+/* Profile */
+
+.pill-green {
+  background-color: white;
+  color: black;
+  border: 1px solid #048a38;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: fit-content;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pill-lightgreen {
+  background-color: #82b981;
+  color: white;
+  border: 1px solid #82b981;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: fit-content;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.select-sizer {
+  height: 125px;
+}
+
+/* Search page */
+
+.foodItem {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 15px;
+  height: 45px;
+  padding: 5px 15px;
+  position: relative;
+}
+
+.foodItem:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.listNumber {
+  background-color: #dee2cf;
+  color: black;
+  font-size: 12px;
+  padding: 9px 9px;
+  margin-right: 10px;
+}
+
+.listNumber > span {
+  margin: 3px;
+}
+
+.listArrow {
+  position: absolute;
+  right: 25px;
 }
